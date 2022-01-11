@@ -17,3 +17,17 @@ for i, d in enumerate(Data):
 print(l, L)
 
 
+# # 2nd sol
+# import sys
+
+# N = int(sys.stdin.readline())
+
+# Data = list(map(int, sys.stdin.readline().split()))
+
+
+
+# l, L = min(Data), max(Data)
+    
+# print(l, L)
+
+
