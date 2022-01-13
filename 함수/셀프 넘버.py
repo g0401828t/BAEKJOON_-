@@ -21,3 +21,21 @@
 #         if thereis == 0:
 #             print(i)
 
+# 1st Sol
+def D(n):
+    N = str(n)
+
+    result = n
+    for i in N:
+        result += int(i)
+    
+    return result
+
+not_self = set()
+for i in range(1, 10001):
+    not_self.add(D(i))
+
+all = set([n for n in range(1, 10001)])
+
+for i in sorted(all - not_self):
+    print(i)
