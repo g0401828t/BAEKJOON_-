@@ -1,34 +1,37 @@
-import math
+# # # 1st Sol
+# import math
 
+# N = int(input())
 
+# result = math.inf
+# total = 0
+# for i in range(N//5 + 1):
+#     remain = N - (5*i)
+#     total += i
+#     while remain > 0:
+#         remain -= 3
+#         total += 1
+    
+#     if result >= total and remain == 0:
+#         result = total
+#     total = 0
+
+# if result == math.inf:
+#     print(-1)
+# else:
+#     print(result)
+    
+# # 2nd Sol
 N = int(input())
 
-# N = 5x + 3y
-
-# x = N//5
-# remain = N%3
-
-
-result = math.inf
-total = 0
-count_5 = 0
-count_3 = 0
-for i in range(N//5 + 1):
-    count_5 = i
-    remain = N - (5*i)
-    total += i
-    while remain > 0:
-        count_3 += 1
-        remain -= 3
-        total += 1
+result = 0
+while N>=0:
+    if N % 5 ==0:
+        result += N//5
+        print(result)
+        break
     
-    if result >= total and remain == 0:
-        result = total
-    count_5 = 0
-    count_3 = 0
-    total = 0
-
-if result == math.inf:
-    print(-1)
+    N -= 3
+    result += 1
 else:
-    print(result)
+    print(-1)
