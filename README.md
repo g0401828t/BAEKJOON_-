@@ -17,7 +17,7 @@
     - 부녀회장이 됱테야 *
 12. 기본 수학 2
     - 설탕 배달 **
-    - Fly me to the Alpha Centauri *****
+    - 1011번. Fly me to the Alpha Centauri *****
 14. 재귀
 15. **브루트 포스 (구현)**
 16. 정렬
