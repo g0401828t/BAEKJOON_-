@@ -115,5 +115,48 @@
 
 #   print(result1, result2)
 
+# # 4th Trial => 미리 제한된 n보다 작은 수들의 소수 리스트 만들어 놓고 진행 => 시간 초과...
+import math
+import sys
+from itertools import product
+
+def make_Sosu_list():
+  sosu_list = [i for i in range(2, 10001)]
+
+  for s in sosu_list:
+    for i in range(s*2, 10001, s):
+      try:
+        sosu_list.remove(i)
+      except:
+        continue
+
+  return sosu_list
+
+
+
+sosu_list = make_Sosu_list()
+print(sosu_list)
+  
+T = int(sys.stdin.readline())
+
+for t in range(T):
+  n = int(sys.stdin.readline())
+
+  diff = math.inf
+  for s in sosu_list:
+    if s>n:
+        break
+    for o in sosu_list:
+      if o>n:
+        break
+      if s+o == n and abs(s-o) < diff:
+        result1, result2 = s, o
+        diff = abs(s-o)
+          
+
+  print(result1, result2)
+
+
+
 
 
