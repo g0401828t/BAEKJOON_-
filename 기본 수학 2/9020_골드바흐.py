@@ -77,3 +77,43 @@
 #   result1, result2 = Sosu_list(n)
 
 #   print(result1, result2)
+
+
+# # 3rd Trial => .remove()를 통해 소수 찾는 부분 시간 단축 시도 했지만 실패... => 시간 초과
+# import math
+# import sys
+# from itertools import product
+
+# def Sosu_list(X):
+#   sosu_list = [i for i in range(2, X+1)]
+
+#   for s in sosu_list:
+#     for i in range(s*2, X+1, s):
+#       try:
+#         sosu_list.remove(i)
+#       except:
+#         continue
+
+#   return sosu_list
+
+
+
+# T = int(sys.stdin.readline())
+
+# for t in range(T):
+#   n = int(sys.stdin.readline())
+
+#   sosu_list = Sosu_list(n)
+#   # print(sosu_list)
+  
+#   diff = math.inf
+#   for s in sosu_list:
+#     for o in sosu_list:
+#       if s+o == n and abs(s-o) < diff:
+#         result1, result2 = s, o
+#         diff = abs(s-o)
+
+#   print(result1, result2)
+
+
+
