@@ -9,4 +9,5 @@ for _ in range(N):
 data.sort()
 
 for i in data:
-    print(i)
+    # print(i)
+    sys.stdout.write(str(i)+'\n')
