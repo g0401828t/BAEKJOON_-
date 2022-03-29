@@ -1,4 +1,5 @@
-n,m = list(map(int,input().split()))
+## 풀이 1: DFS로 풀기
+,m = list(map(int,input().split()))
  
 s = []
 visited = [False] * n
@@ -18,3 +19,12 @@ def dfs(start, n, m):
  
 dfs(0, n, m)
 
+## 풀이 2: 조합으로 풀기
+import sys
+from itertools import combinations
+
+N, M = map(int, sys.stdin.readline().split())
+
+comb = combinations(range(1, N+1), M)
+for i in comb:
+    print(*i)
