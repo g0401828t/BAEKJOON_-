@@ -1,3 +1,4 @@
+## 풀이 1: DFS로 풀기
 n,m = list(map(int,input().split()))
  
 s = []
@@ -18,3 +19,11 @@ def dfs():
  
 dfs()
 
+## 풀이 2: 순열로 풀기
+import sys
+from itertools import permutations
+
+N, M = map(int, sys.stdin.readline().split())
+
+for i in permutations([i+1 for i in range(N)], M):
+    print(*i)
